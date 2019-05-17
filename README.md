@@ -33,7 +33,7 @@ Refer to <https://stackoverflow.com/questions/25915634/difference-between-microt
 
 > One go-around of the event loop will have exactly one task being processed from th **macrotask queue** (this queue is simply called the task queue in the [WHATWG specification](https://html.spec.whatwg.org/multipage/webappapis.html#task-queue)). After this marcotask has finished, all available **microtasks** will be processed, namely within the same go-around cycle. While these microtasks are processed, they can queue even more microtasks, which will all be run one by one, until the microtask queue is exhausted.
 
-*As noted above, if one microtask creates a new microtask, which will be pushed into the tail of the microtask queue, it can starve the other marcotask because the microtask queue will never be cleared.*
+*As noted above, if one microtask creates a new microtask constantly, which will be pushed into the tail of the microtask queue, it can starve the other marcotask because the microtask queue will never be cleared.*
 
 Examples:
 **macrotasks**: setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering
