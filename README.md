@@ -156,3 +156,5 @@ The order of execution
   4. Finally clearing the macrotask queue.
 
 So, the result will be as shown above.
+
+中文版请访问[这儿](https://www.jianshu.com/p/44813e5de7aa)
